@@ -1,0 +1,49 @@
+@import '_variables.scss';
+
+.main__add-button {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 216px;
+  padding: 12px 26px;
+  outline: none;
+  border: 1px solid $firm;
+  background-color: transparent;
+  color: $firm;
+  cursor: pointer;
+  transition-property: transform, background-color, border;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+
+    .main__add-icon svg path{
+      transition: fill .3s ease-in-out;
+    }
+    .main__add-text {
+      margin-left: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color .3s ease-in-out;
+    }
+
+    &:hover {
+      background-color: $hover;
+      border: 1px solid transparent;
+    }
+
+    &:active {
+      background-color: $active;
+    }
+
+    &:hover .main__add-icon svg path {
+      fill: #fff;
+    }
+
+    &:hover .main__add-text {
+      color: #fff;
+    }
+    
+    &:active {
+      transform: scale(0.95);
+    }
+}

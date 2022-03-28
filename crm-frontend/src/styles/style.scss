@@ -1,0 +1,43 @@
+@import '_variables.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans';
+  background-color: $main-grey;
+}
+
+.container {
+  margin: auto;
+  max-width: 1366px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+/* header */
+
+@import '_header.scss';
+@import '_main.scss';
+@import '_addButton.scss';
+@import '_table-tools.scss';
+@import '_modal.scss';
+@import '_select.scss';
+@import '_preloader.scss';
+
+
+
+

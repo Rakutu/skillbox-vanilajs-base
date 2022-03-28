@@ -1,0 +1,144 @@
+@import '_variables.scss';
+
+.main {
+  padding: 20px 90px;
+  font-family: 'Open Sans';
+  z-index: 100;
+  
+    &__title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      margin-bottom: 25px;
+    }
+
+    &__list {
+      position: relative;
+      font-size: 14px;
+      background-color: #fff;
+      min-width: 1366px;
+      min-height: 300px;
+
+      &-item {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid $border-grey;
+      }
+
+      &-id {
+        flex: 0 0 4.7%;
+        margin-right: 28px;
+        font-size: 12px;
+        color: $txt-grey;
+      }
+
+      &-name {
+        flex: 0 0 30%;
+        margin-right: 30px;
+      }
+
+      &-add-block {
+        flex: 0 0 10.33%;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 60px;
+
+        .add__time {
+          color: $txt-grey;
+        }
+      }
+
+      &-change-block {
+        flex: 0 0 10.33%;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 58px;
+        
+        .change__time {
+          color: $txt-grey;
+        }
+      }
+
+      &-contacts {
+        flex: 0 0 8.75%;
+        margin-right: 50px;
+        flex-wrap: wrap;
+
+          .contact__icon {
+            margin-right: 7px;
+          }
+      }
+
+      &-change {
+        flex: 0 0 8.3%;
+        cursor: pointer;
+
+          .change__text {
+            transition: color .3s ease-in-out;
+          }
+
+          &:hover .change__text {
+            color: $firm;
+          }
+      }
+
+      &-delete {
+        margin-left: auto;
+        flex: 0 0 8.3%;
+        cursor: pointer;
+
+        .delete__text {
+          transition: color .3s ease-in-out;
+        }
+
+        &:hover .delete__text {
+          color: $red;
+        }
+      }
+
+    }
+    
+    
+}
+
+.error {
+  position: absolute;
+  padding: 0 12%;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  color: $red;
+}
+
+
+.list-container {
+  margin-bottom: 30px;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, .6);
+  color: #fff;
+  font-size: 12px;
+  padding: 7px;
+  border-radius: 5px;
+
+    &::after {
+      content: '\25BC';
+      position: absolute;
+      left: 45%;
+      top: 87%;
+      color: rgba(0, 0, 0, .6);
+    }
+}
+
+@media (max-width: 1400px) {
+  .list-container {
+    overflow-x: auto;
+  }
+}
+

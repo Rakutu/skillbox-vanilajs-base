@@ -1,0 +1,27 @@
+@import '_variables.scss';
+
+.choices {
+  min-width: 123px;
+  margin-bottom: 0;
+  max-height: 37px ;
+  z-index: 1000;
+  background-color: $grey;
+
+
+  &__inner {
+    padding: 0;
+    border: 1px solid $grey;
+  }
+
+  &__item {
+    padding: 0;
+  }
+
+  &__list--dropdown {
+    border: 1px solid $grey;
+  }
+
+  &__list--dropdown &__item--selectable {
+    padding-right: 0;
+  }
+}

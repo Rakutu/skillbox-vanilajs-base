@@ -1,0 +1,66 @@
+@import '_variables.scss';
+
+.select {
+
+  &__container {
+    position: relative;
+    min-width: 123px;
+    max-width: 123px;
+    font-size: 12px;
+    background-color: $border-grey;
+    cursor: pointer;
+  }
+
+  &__header {
+    display: flex;
+    max-height: 37px;
+    padding: 9px 12px;
+    line-height: 17px;
+    border: 1px solid $grey;
+    border-right: none;
+  }
+
+  &__choose {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 7px;
+    top: 32%;
+    transition: transform .3s ease-in-out;
+  }
+
+  &__body {
+    position: absolute;
+    width: 124px;
+    background-color: $modal-grey;
+    border: 1px solid $grey;
+    border-top: none;
+    transition: transform .3s ease-in-out;
+    transform-origin: top left;
+    transform: scale(0);
+    z-index: 1000;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 12px;
+    min-height: 35px;
+
+    &:hover {
+      background-color: $border-grey;
+    }
+  }
+
+  &__body--on .select__body{
+    transform: scale(1);
+  }
+
+  &__body--on .select__icon {
+    transform: rotate(180deg) translateY(4px);
+  }
+
+}
